@@ -1,7 +1,14 @@
-<script>
-  window.addEventListener('devicemotion', function(event) {
-    if (event.acceleration.x > 1 || event.acceleration.y > 1 || event.acceleration.z > 10) {
-      window.location.href = 'https://img01.sogoucdn.com/net/a/04/link?appid=100520145&url=http%3A%2F%2Fimg02.sogoucdn.com%2Fapp%2Fa%2F100520146%2F2053dd0c62bc6d071a52db7a9c638079';
-    }
-  });
-</script>
+// HTML代码
+<div id="shake-container">
+  <button onclick="openLink()">摇一摇</button>
+</div>
+// JavaScript代码
+function openLink() {
+  // 获取摇一摇的数据
+  var shakeData = navigator.accelerometer.getCurrentAcceleration();
+  // 判断摇一摇的数据是否达到阈值
+  if (shakeData.x > 10 || shakeData.y > 10 || shakeData.z > 10) {
+    // 打开指定网页
+    window.open('https://www.example.com');
+  }
+}
