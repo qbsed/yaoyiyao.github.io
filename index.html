@@ -1,14 +1,17 @@
-// HTML代码
-<div id="shake-container">
-  <button onclick="openLink()">摇一摇</button>
-</div>
-// JavaScript代码
-function openLink() {
-  // 获取摇一摇的数据
-  var shakeData = navigator.accelerometer.getCurrentAcceleration();
-  // 判断摇一摇的数据是否达到阈值
-  if (shakeData.x > 10 || shakeData.y > 10 || shakeData.z > 10) {
-    // 打开指定网页
-    window.open('https://www.example.com');
-  }
-}
+<html>
+<head>
+<title>摇一摇打开网页</title>
+<script>
+window.addEventListener('devicemotion', function(event) {
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
+    if (x > 10 || y > 10 || z > 10) {
+        window.location.href = "http://www.example.com";
+    }
+});
+</script>
+</head>
+<body>
+</body>
+</html>
