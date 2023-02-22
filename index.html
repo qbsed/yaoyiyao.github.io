@@ -1,15 +1,5 @@
 <html>
-    <head>
-  <script>
-    window.addEventListener('devicemotion', function(event) {
-      if (event.acceleration.x > 10 || event.acceleration.y > 10 || event.acceleration.z > 10) {
-        window.location.href = 'http://www.example.com';
-      }
-    });
-  </script>
-    </head>
-    <head>
-    <title>Shake to Open Webpage</title>
+  <head>
     <script>
       window.addEventListener('devicemotion', function(event) {
         if (event.acceleration.x > 10 || event.acceleration.y > 10 || event.acceleration.z > 10) {
@@ -19,6 +9,6 @@
     </script>
   </head>
   <body>
-    <h1>Shake your device to open the webpage!</h1>
+    <h1>摇一摇打开网页</h1>
   </body>
 </html>
