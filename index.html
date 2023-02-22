@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <script>
+      window.addEventListener('devicemotion', function(event) {
+        if (event.acceleration.x > 1 || event.acceleration.y > 1 || event.acceleration.z > 1) {
+          window.location.href = 'http://www.example.com';
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>摇一摇打开网页</h1>
+  </body>
+</html>
